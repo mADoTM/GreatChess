@@ -11,13 +11,12 @@ import java.util.Objects;
 
 public abstract class AbstractFigure implements Figure {
     protected @NotNull Cell position;
-    protected @NotNull List<Step> possibleSteps;
+    protected List<Step> possibleSteps;
     protected final @NotNull PlayerType color;
 
     public AbstractFigure(@NotNull Cell position, @NotNull PlayerType color) {
         this.position = position;
         this.color = color;
-        this.possibleSteps = new ArrayList<>();
         updatePossibleSteps();
     }
 
