@@ -16,10 +16,6 @@ class Converter {
         final var leftCell = stringToCell(leftStr);
         final var rightCell = stringToCell(rightStr);
 
-        if (!GameFieldHelper.canCellBeInField(leftCell) || !GameFieldHelper.canCellBeInField(rightCell)) {
-            throw new IllegalArgumentException("Неверно введенные координаты");
-        }
-
         return new Step(leftCell, rightCell);
     }
 
